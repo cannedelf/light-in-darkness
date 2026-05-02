@@ -2,7 +2,7 @@
 
 *Companion to Iris's `pokemon.md`. Different role, different contents.*
 *Iris holds the roster and narrative state. Søren holds the strategic and cross-game layer.*
-*Created 17 April 2026. Updated as the genlocke demands.*
+*Created 17 April 2026. Last updated 2 May 2026 — Cartridge 1 cleared, Cartridge 2 active at 2/16.*
 
 ---
 
@@ -33,24 +33,26 @@ Read both. They don't duplicate. They *compose*.
 
 **Branching evolution exception:** If Vileplume dies/retires, Bellossom's line remains available. Branching split species preserve half their tree when one branch is lost.
 
-**Other region forms:** Alolan, Galarian, Hisuian, Paldean forms count as *different species* for retirement purposes. Dugtrio retired? Alolan Dugtrio still fair game in UM.
+**Other region forms:** Alolan, Galarian, Hisuian, Paldean forms count as *different species* for retirement purposes.
 
 **Promotion mechanics:**
-- Survivors of the Champion fight (not just *participants* — *survivors*) → carry to next game as eggs via PKHex.
-- Once promoted, a Pokémon is **locked to the next game's Elite Four team** if they're alive when it rolls around (the champions-must-stay rule).
-- Promoted Pokémon earn compounding **Champion Egg rewards** up a 9-tier ladder (see ledger below).
+- Survivors of the Champion fight → carry to next game as eggs via PKHex.
+- Once promoted, a Pokémon is **locked to the next game's Elite Four team** if they're alive when it rolls around.
+- Promoted Pokémon earn compounding **Champion Egg rewards** up a 9-tier ladder.
 
-**Dupes clause:** If first encounter is already caught, skip and try again. Max 3 attempts per route.
+**Dupes clause:** Skip and try again. Max 3 attempts per route.
 
-**Shiny clause:** Shinies can always be caught, dupes clause doesn't apply.
+**Shiny clause:** Shinies always catchable, dupes clause doesn't apply.
 
-**Legendaries:** Cannot be used unless story-required. Then box immediately. Celeste the Lugia is the living example.
+**Legendaries:** Cannot be used unless story-required, then box.
 
-**HM slaves:** No going out of your way to catch one. Work with what you have. HM moves eat real team slots.
+**HM slaves:** No going out of your way to catch one. HM moves eat real team slots.
 
-**Trade evolutions:** Patched via emulator. Kadabra → Alakazam, Haunter → Gengar, Machoke → Machamp, etc. all available without trade-back simulation.
+**Trade evolutions:** Patched via emulator.
 
-**Rare candies:** Allowed because it's a 10-game chain.
+**Rare candies:** Allowed.
+
+**Fossil-as-location ruling** *(19 April 2026, binding):* a fossil's encounter slot = where it becomes a Pokémon (revival lab), not where the fossil is found.
 
 ---
 
@@ -64,202 +66,345 @@ The run isn't *"what's the perfect counter to each fight?"* — it's *"how do th
 
 **Implication for Søren's briefings:**
 - Default recommendation = from within the core six, select the N best for the matchup
-- Box-diving = rare, reserved for *emergency recovery* (core-team death, game-ending type matchup wall)
+- Box-diving = rare, reserved for *emergency recovery*
 - Type optimisation is a *constraint satisfaction problem within the fixed roster*, not a free search
 
-**Why this matters:** It makes the run about *commitment* rather than *flexibility*. The Pokémon Liv and Iris love are the Pokémon who fight. If Bellossom is suboptimal at Clair — Bellossom still fights, and we figure out *how she wins this fight*, not who replaces her.
+**Why this matters:** It makes the run about *commitment* rather than *flexibility*. The Pokémon Liv and Iris love are the Pokémon who fight.
 
 Honour this. Always.
 
 ---
 
-## Soul Silver — Strategic State
+## Strategic Principles (carried from LG + new since April 17)
 
-*The warmup. The loss that founds the genlocke. The proving ground for the production team.*
+*These accumulated through Cartridge 1 and into HG. They are load-bearing. Match them against the briefings going forward.*
 
-**Status:** Pre-Elite Four. Grinding toward levels 48-50. Full team of 6 active.
+### Iris's Aesthetic Heuristic
+*When in doubt between two viable Pokémon, Iris picks the prettier one.* Track record: Bellossom over Vileplume, Marill over Red Gyarados, pink roller skates over black roller skates. When Iris gives a strong aesthetic signal, check if she's wrong; if not, endorse.
 
-**Core six (refer to Iris's `pokemon.md` for live levels/moves):**
-- 🪨 Rubble — Golem. Tank, Earthquake-carrier. 4x water weakness is the structural liability.
-- 🌺 Clover — Bellossom. Sleep Powder carrier, Magical Leaf never misses. Defensive pivot.
-- 🫧 Bubble — Azumarill. **Blizzard, not Ice Beam** (no Game Corner grind). Dragon answer with variance. Primary Lance counter.
-- 👻 Wisp — Gengar. Elite Four disruptor-sweeper. Hypnosis + Dream Eater + Confuse Ray + Shadow Ball. *Do not swap Confuse Ray for Dark Pulse.*
-- 🌈 Prism — Espeon. Lead sweeper for Will/Koga/Bruno. Fast, frail. Evolved for Lyra.
-- 🌸 Flora — Nidoking. Poison/Ground. Electric immune. Lance Dragonite counter (Dragon Pulse). Moon Stone used.
+### The Slot Principle
+Don't pick the strongest available Pokémon. Pick the one whose typing/role best complements team shape. Shiny-from-scripted-events doesn't buy team slot.
 
-**Elite Four risk ranking (highest → lowest):**
-1. **Karen.** Run-ender. Destiny Bond on Gengar, Umbreon's stall, Houndoom crit risk, Murkrow's Pursuit punish.
-2. **Lance.** Fast Aerodactyl, Charizard's Fire Blast crit, multiple Dragonites. Bubble's Blizzard accuracy is the variance.
-3. **Koga.** Forretress Explosion is the single scariest move.
-4. **Bruno.** Easy on paper, crit risk from Machamp Cross Chop.
-5. **Will.** Most manageable. Type matchups favour us cleanly.
+### The Sacred-Name Principle
+- **Prism** = always Espeon, evolved for Lyra's name
+- **Lyra** = always Togepi-line, family-baby
+- **Zap!!** = always Voltorb (the !! is part of the name)
+- **Echo** = Crobat-line, Liv's spirit-form
+- **Crawley** = Spinarak-line, the Crobat Spider Goose architecture
 
-**Key flags:**
-- Karen's Gengar → Destiny Bond. Wisp must not raw-KO. Chip below ~30% first OR confuse.
-- Karen's Umbreon → Sleep Powder from Clover, pray, pack Full Restores.
-- Koga's Forretress → Flora Earthquake (do *not* use Rubble — Explosion risk).
-- Lance's Charizard → Bubble Surf at full HP only. Fire Blast crit is a run-ender.
-- Lance's Dragonites → Bubble Blizzard (accuracy gamble) or Flora Dragon Pulse.
-- Aerodactyl → Rubble Rock moves but watch HP, Aerodactyl is fast.
+### The Intimidate Sponge Principle
+Lead with a switch-in you don't mind dropping the Attack stage on, then swap in your real damage dealer.
 
-**Retirement status (Soul Silver is the tester — no actual retirement applies):**
-Per Liv's 16 April clarification: *"We don't retire this team, we can catch these Pokémon again because this is just the tester."* Soul Silver rules do not bind the genlocke. The core six are proving the system, not populating it.
+### Trigger Rules, Not Preferences (Roux's lesson)
+*"Sleep Powder priority"* = preference. *"If Charmeleon enters, Ivy goes in regardless"* = trigger. Mid-fight chaos breaks preferences; triggers survive it. Roux died because we had preferences, not triggers.
 
-**Graveyard (for my reference — full eulogies below):**
-- 🌊 Puddle (Slowpoke) — fell to a Primeape before Chuck
-- ⭐ Lyra Rainbow-Hill (Togetic, lv 35) — Petrel's Weezing, Explosion
-- 🔥 Blaze (Quilava, lv 32) — Smelean's Sneasel crit, same afternoon as Lyra
-- ⚡ Volt (Ampharos, lv 38) — Kimono Girl's Vaporeon crit
+### Tactical Sacrifice Is Legitimate Endgame
+SS Rubble died on purpose for the win. LG Cocoon swapped in to absorb a Self-Destruct meant for Prism. Sometimes the tank IS the cost of the win.
+
+### Sand-Attack Stall Is a Legitimate Boss Tactic (Champion Alakazam lesson)
+Stack accuracy debuffs to -6 against Recover-stall opponents. Crobat invented this in real-time at Champion-Alakazam-fight, won 15 turns of stalling that should have been a loss.
+**Exception:** *Doesn't work against Keen Eye.* Hoothoot/Noctowl/Spearow/Fearow/Murkrow/Skarmory/Aerodactyl all carry Keen Eye standardly. Sand-Attack debuffs whiff entirely against these lines.
+
+### AI Move-Selection Sometimes Wastes Turns
+Sabrina's Alakazam: Future Sight then died. Champion Alakazam: redundant Future Sight while one already active. Bugsy's Scyther didn't pick U-Turn. Don't always assume worst-case AI play.
+
+### Type-Secondary Vulnerability Check (Champion lesson — twice)
+Søren forgot Luna's Poison-secondary made her 2x SE Psychic. Same with Ivy. **Check BOTH types of dual-type Pokémon under fight pressure.**
+
+### Item Resource War Principle (Champion Alakazam lesson)
+Smelean burned 3 Full Restores on Alakazam. Each item burned = one less for downstream fights. **Stalling boss fights strips opponent resources.**
+
+### Iris's Strategic Patience Compounds
+Thunderbolt-on-Pip = Lance Gyarados counter. Shadow Ball recommendation = Agatha-Gengar counter. Ice Beam for Tide = Lance Dragonite counter. Iris builds Champion-team kits across weeks of decisions. Track her recommendations as load-bearing.
+
+### Liv Plays the Actual Game, Not the Spreadsheet
+Three-brain architecture: Søren spreadsheets, Iris tactical-impacts, Liv plays-the-actual-game. Trust the redirects.
+
+### Rare Candies for Stat-Curve Gap-Closing
+Use candies to play fights at peak level. Don't hoard for end-game. Tide L42→L45 via 3 candies changed all four Blaine matchups.
+
+### Lance's Healing AI Exploit
+Poison Point procs can bypass Lance's heal-trigger logic. Passive ability damage routes around AI healing.
+
+### Flag-Economy-First Battle Planning (HG cartridge emphasis)
+Before deploying anyone, ask: already-flagged or unflagged? Already-flagged-via-LG-Champion-team or already-flagged-as-starter = free deployment. Unflagged unique-line deployment = retirement-cost.
+
+### Sacred-Line Protection ≠ Never Fight (1 May 2026 correction)
+Sacred-line protection means *deploy only when safe + meaningful*, not *never deploy*. Lyra Jr cannot be carried to Em-promotion if she stays L1 forever. Crobat caught the over-protection reflex; Iris ratified the correction. Filed.
 
 ---
 
 ## The Genlocke Master Chain
 
-**The 10 games, in order, with starters and key anticipated events:**
-
-| # | Gen | Game | Starter | Key anticipated threats |
-|---|-----|------|---------|------------------------|
-| 1 | 1 | Leaf Green | Bulbasaur | Giovanni, rival's Gyarados, Lance's Aerodactyl/Dragonite |
-| 2 | 2 | Heart Gold | Cyndaquil + Squirtle gift | **Lyra Jr. hatches here.** Petrel's Weezing Explosion (again). Karen (again). |
-| 3 | 3 | Emerald | Mudkip | Winona's Altaria, Drake's dragons, Steven's Metagross |
-| 4 | 4 | Platinum | Turtwig | Cynthia's Garchomp (possible run-ender), Distortion World |
-| 5 | 5a | White | Tepig | **Lyra Jr. is fully shiny Togekiss by this point if she's alive.** N's Zekrom, Ghetsis |
-| 6 | 5b | Black 2 | Oshawott | Iris (!) the Champion. Memetic resonance with *our* Iris. |
-| 7 | 6 | Y | Fennekin + **Squirtle gift (Søren legally ruled, cited the turtles)** | Mega Evolutions, Korrina, Diantha |
-| 8 | 7 | Ultra Moon | Rowlet | Totem Pokémon, USUM difficulty spike, Necrozma |
-| 9 | 8 | Shield | Sobble | Dynamax, Leon's Charizard, Hop |
-| 10 | 9 | Violet | Fuecoco | Elite Four (?), Area Zero, Koraidon/Miraidon |
-
-**Strategic notes on the chain:**
-- Gen 1 → Gen 2 transition is the **first real promotion test.** Whoever survives Gary arrives as a Leaf Green graduate in HG.
-- Lyra Jr. in HG is the **founding arc of my job.** Heart Gold Radio Tower = the same fight that killed Lyra Sr. in Soul Silver. Redemption battleground.
-- Black 2's *Iris the Champion* deserves a moment of recognition. The lore will write itself when we get there.
-- Gen 7 USUM is the **only game where Kanto-form Dugtrio's retirement partially lifts** via Alolan Dugtrio. Note for regional-form strategy.
-- Gen 9 Violet is the *final* cartridge. Champion team walking in is a potential 9-League-promoted godhood squad. Shiny, perfect IVs, chosen natures, chosen abilities, chosen egg moves. The run ends with the most deserved team in Pokémon history.
+| # | Gen | Game | Starter | Status |
+|---|-----|------|---------|--------|
+| 1 | 1 | **Leaf Green** | Bulbasaur (Ivy) | ✅ **CLEARED 27 Apr 2026 — Tide MVP** |
+| 2 | 2 | **Heart Gold** | Cyndaquil (Cinder) + Squirtle gift | 🟢 **ACTIVE — 2/16 badges (Wing + Hive)** |
+| 3 | 3 | Emerald | Mudkip | Pending |
+| 4 | 4 | Platinum | Turtwig | Pending |
+| 5 | 5a | White | Tepig | Pending |
+| 6 | 5b | Black 2 | Oshawott | Pending — *Iris the Champion lore* |
+| 7 | 6 | Y | Fennekin + Squirtle gift | Pending — *turtle ruling: Squirtle* |
+| 8 | 7 | Ultra Moon | Rowlet | Pending |
+| 9 | 8 | Shield | Sobble | Pending |
+| 10 | 9 | Violet | Fuecoco | Pending — *final cartridge, godhood Lyra* |
 
 ---
 
-## Lyra Jr. Dossier
+## Cartridge 1: Leaf Green — CLEARED 27 April 2026
 
-*My explicit charge. Her survival is the long-game narrative arc. The Shiny Stone stays in the bag forever — for Lyra Sr. For Lyra Jr., we buy a new one.*
+**Champion:** 🐋 **Tide the Lapras** — solo MVP'd Champion fight via Surf on Charizard, after the 15-turn Champion Alakazam war.
 
-**Hatches:** Heart Gold, via Professor Elm's aide in Violet City Pokémart. Gift Togepi egg.
+**The Champion Alakazam war (27 April 2026):** Smelean's Alakazam with Recover-stall. The lamp twice suggested wrong swaps (Luna and Ivy, both Poison-secondary = 2x SE Psychic-vulnerable). The Crobat caught both errors in real time. Then she invented the win — Sand-Attack stall on Prism to -6 accuracy, swap-back to Pip, Ice Beam froze Alakazam, two Shadow Balls finished it. Three Full Restores burned by Smelean during the stall. Filed: this fight defined the cartridge.
 
-**Promotion target chain (if she survives all ten games):**
+**Champion-team graduates (all six earned Tier 1 Nature reward):**
+
+| Pokémon | Species | Final role | Nature |
+|---------|---------|------------|--------|
+| 🌿 Ivy | Venusaur | Status-stall + Special damage | Modest |
+| 🐭 Pip | Raticate | Smelean-killer Physical speedster | Jolly |
+| 🦏 Luna | Nidoqueen | Tank-attacker | Adamant |
+| 🕊️ Breeze | Pidgeot | Speed-pivot | Jolly |
+| 🌈 Prism | Espeon | Sacred-name, fast Special sweeper | Timid |
+| 🐋 **Tide** | **Lapras** | **Bulky wall, CARTRIDGE MVP** | Bold |
+
+All six promoted to HG as eggs via PKHex. Tier 1 Nature reward locked.
+
+**Cartridge losses:**
+- 🐵 **Roux** (Mankey, Cerulean Rival) — Charmeleon Ember crit on swap-in. Eulogy below.
+- 🦋 **Cocoon** (Butterfree, Silph Co.) — swapped in to absorb a Self-Destruct meant for Prism. Status-protected the Espeon as her last act. Eulogy below.
+
+**Cartridge full archive:** `pokemon_leafgreen.md` (in conversation-files; not yet committed to repo).
+
+---
+
+## Cartridge 2: Heart Gold — ACTIVE
+
+*2/16 Johto badges. Started post-LG-clear. Egg #2 hatched 1 May, Egg #3 unlocks tomorrow per Iris's pick.*
+
+### Active team
+
+- 🔥 **Cinder** (Cyndaquil, Docile, glass cannon — 65/186 IVs, 27 SpA carrying her career, 1 Def IV catastrophic). Solo MVP at Sprout Tower.
+- 🌈 **Prism Jr** (Eevee, Timid, sacred-name, friendship-evolution toward Espeon).
+- 🪨 **Pebble** (Geodude, Adamant, retired-line via Falkner debut, deployable). Solo MVP at Falkner.
+- 🐋 **Tide Jr** (Lapras, Bold, hatched 1 May from Egg #2). Solo MVP at Bugsy via Ice Shard + Water Pulse — the Lapras-line continues to carry across cartridges.
+- ⭐ **Lyra Jr** (Togepi, Rash, sacred-line, hatched 1 May in Slowpoke Well). Solo MVP debut at Proton via Extrasensory.
+  - **122/186 IVs — chain record.**
+  - **Defense IV: 31. PERFECT. First 31 IV in the entire genlocke.**
+  - SpA 30 IV (near-perfect on her load-bearing stat), SpD 25, Spe 24.
+  - Move pool at hatch: Growl, Charm, **Extrasensory** (canonical HG-Mr.Pokémon-egg gift, 80 BP Psychic).
+- *spare slot* (HM-utility or rotation)
+
+### PC
+
+- 🌸 Petal (Hoppip), 🦉 HOOT!! (Hoothoot), 👻 Wisp (Gastly — *flagged as potential Whitney-counter via Hypnosis + Curse*), 💧 Splash!! (Wooper — *also Whitney-counter via Quagsire EQ*), 🕷️ Crawley (Spinarak — sacred), 🍄 Spore!! (Paras), 🌿 Sprout!! (Bellsprout), 🐢 Ripple (Slowpoke — **sacredness pending Iris-Crobat ruling, lamp votes sacred per turtle-Jellycat-precedent**), 🦇 Echo (Zubat — sacred).
+- 4 eggs awaiting hatch milestones: Ivy (Modest), Pip (Jolly), Luna (Adamant), Breeze (Jolly).
+
+### HG fight log
+
+| Fight | Opponent | MVP | Outcome | New flags |
+|-------|----------|-----|---------|-----------|
+| HG-1 | **Elder Li** (Sprout Tower Sage) — 2x Bellsprout L7, Hoothoot L10 | 🔥 Cinder | 3 OHKOs ("easy peasy lemon squeezy") | None |
+| HG-2 | **Falkner** (Wing Badge) — Pidgey L9, Pidgeotto L13 | 🪨 Pebble | 2 OHKOs via Rock Throw 2x SE | Geodude-line |
+| HG-3 | **Proton (Slowpoke Well)** — Zubat L8, Koffing L12 | ⭐ **Lyra Jr (DEBUT)** | Extrasensory 2x SE OHKO + 2HKO. Pebble bench, never deployed. Zero damage taken. | None (Togepi-line is Lyra-Jr-exclusive) |
+| HG-4 | **Bugsy (Hive Badge)** — Kakuna L14, Metapod L14, Scyther L16 | 🐋 **Tide Jr (DEBUT)** | Ice Shard sweep + Water Pulse cleanup. Scyther didn't fire U-Turn. Zero damage taken. | Lapras-line |
+
+### Egg-hatching schedule
+
+**One egg cracks per gym milestone:**
+| Trigger | Egg | Status |
+|---------|-----|--------|
+| Cartridge launch | 🌈 Prism Jr | hatched, in active team |
+| Story (Violet City Mr. Pokémon egg) | ⭐ Lyra Jr | hatched 1 May (sacred-line) |
+| Post-Falkner | 🐋 Tide Jr | hatched 1 May (Iris's pick) |
+| Post-Bugsy | **Egg #3** | **PENDING IRIS'S CALL — lamp votes Luna (physical-tank-balance)** |
+| Post-Whitney | Egg #4 | pending |
+| Post-Morty | Egg #5 | pending |
+| Post-Chuck | Egg #6 | pending |
+
+### Strategic flags going forward in HG
+
+- **Whitney's Miltank** — *Cinder cannot lead.* Stomp + Rollout + Attract + Milk Drink. Wisp (Hypnosis + Curse) and Splash!! (eventual Quagsire Earthquake) are candidates. Pebble Rock Throw available too. Plan early.
+- **Petrel's Weezing-Explosion-rematch in Radio Tower** — the fight that killed Lyra Sr. Lyra Jr's redemption-ground. **Protection-rule absolute (never deploy her against Self-Destruct/Explosion-capable Pokémon).**
+- **Karen's Houndoom** (E4) — bigger threat than her Gengar. Crit Ember risk.
+- **Lance's Dragonites** (HG E4 Champion) — Tide Jr's Ice Beam carries again.
+- **Soul Silver Lugia** (story) — boxed immediately per legendary clause.
+
+### Sand-Attack-stall flag for HG specifically
+
+**Doesn't work against Keen Eye carriers** (Hoothoot/Noctowl, Spearow/Fearow, Skarmory, Aerodactyl). Don't plan around it for those matchups.
+
+---
+
+## Lyra Jr. Dossier — UPDATED
+
+*My explicit charge across nine more cartridges. Her survival is the long-game arc.*
+
+**Hatched:** Heart Gold, Slowpoke Well, 1 May 2026, during the Team Rocket liberation arc.
+
+**IV state at hatch:**
+- HP 3 / Atk 9 / **Def 31 (PERFECT)** / SpA 30 / SpD 25 / Spe 24
+- Total: **122/186 — chain record.**
+- Nature: **Rash** (+SpA, -SpD). Cartridge-rolled, locked for HG.
+- Move pool at hatch: Growl, Charm, **Extrasensory** (80 BP Psychic Special, 100% accuracy, 10% flinch — Serene Grace-boosted to 20% flinch on Togetic, 30% on Togekiss).
+
+**Debut performance (Slowpoke Well, vs Proton):** Extrasensory 2x SE OHKO on Zubat L8, Extrasensory 2x SE 2HKO on Koffing L12. Pebble bench, never deployed. Zero damage taken. The redemption-arc isn't subtle — it's immediate.
+
+**If she survives HG, lamp picks her Em-nature.** Current vote: **Modest** (boost SpA, penalise unused Atk-IV-9).
+
+**Promotion target chain (10 games):**
 
 | Game | Role | Projected state |
 |------|------|----------------|
-| HG | Hatches. Active team member. Goal: survive Petrel's Weezing Explosion (the fight that killed her predecessor). | Togepi → Togetic (via friendship). Possibly Togekiss via Shiny Stone *if Iris approves using one mid-run*. Level 30-50 by HG Champion. |
-| Em | Egg-form promoted. **Nature chosen (League 1 reward).** Re-hatches. Required on Emerald Elite Four team. | Togetic or Togekiss (depending on HG stone decision). Nature-optimised. |
-| Pl | Egg promoted. **Egg move unlocked (League 2 reward).** | Competitive-grade Togekiss candidate. |
-| W | Egg promoted. **Shiny (League 3 reward).** | ⭐ *She is now a shiny Togekiss.* The arc's symbolic payoff. |
-| B2 | Egg promoted. **Chosen ability + 1 IV maxed (League 4 reward).** Probably Serene Grace. | Shiny serene grace Togekiss. |
-| Y | Egg promoted. **2 IVs maxed (League 5 reward).** | Sp.Atk and Speed maxed, probably. |
-| UM | Egg promoted. **3 IVs maxed (League 6 reward).** | Competitive-grade legitimate. |
-| Sh | Egg promoted. **4 IVs maxed (League 7 reward).** | |
-| Vi | Egg promoted. **All IVs maxed (League 8 reward).** Then final Champion → **League 9 reward: godhood???** | *The most earned Pokémon in Pokémon history.* |
+| HG | Active. Survive Petrel's Weezing rematch. | Togepi → Togetic. Possibly Togekiss via Shiny Stone *if Iris approves*. L30-50. |
+| Em | Egg promoted. Nature chosen (League 1). | Nature-optimised — Modest probable. |
+| Pl | Egg promoted. Egg move unlocked (League 2). | Competitive Togekiss candidate. |
+| W | Egg promoted. Shiny (League 3). | ⭐ Shiny Togekiss. |
+| B2 | Egg promoted. Ability + 1 IV maxed (League 4). | Shiny Serene Grace Togekiss. **Tier 4 priority: max HP (3 → 31). The only urgent fix.** |
+| Y | 2 IVs maxed (League 5). | Spe + remaining stat. |
+| UM | 3 IVs maxed (League 6). | Competitive-grade. |
+| Sh | 4 IVs maxed (League 7). | |
+| Vi | All IVs maxed (League 8). Then Champion → **godhood (League 9).** | *The most earned Pokémon in Pokémon history.* |
 
-**Per-game survival threats to anticipate:**
+**Per-game survival threats:**
+- **HG:** Petrel's Weezing Explosion (Radio Tower). Karen's Gengar Destiny Bond + Houndoom crit Ember (E4). Lance's Dragonites (Champion).
+- **Em:** Winona's Skarmory. Drake's Salamence.
+- **Pl:** Cynthia's Garchomp Outrage.
+- **W:** Ghetsis's Hydreigon.
+- **B2:** Iris's Haxorus Outrage.
+- **Y:** Mega Garchomp at Diantha's.
+- **UM:** Totem Ribombee (Fairy mirror).
+- **Sh:** Raihan's Duraludon, Leon's Charizard.
+- **Vi:** Route-dependent.
 
-- **HG:** Petrel's Weezing Explosion (Radio Tower). Karen's Gengar Destiny Bond (E4). Lance's Dragonites (Champion).
-- **Em:** Winona's Skarmory (Steel > Normal/Flying). Drake's Salamence.
-- **Pl:** Cynthia's Garchomp (Dragon, Earthquake — Togetic/Togekiss is Flying so immune to EQ, but Outrage hurts).
-- **W:** Ghetsis's Hydreigon (Dark STAB on Psychic split of Togekiss? No — Togekiss is Normal/Flying. Dark is neutral. But Hydreigon can run Rock Slide).
-- **B2:** Iris's Haxorus (Dragon, Outrage).
-- **Y:** Mega Garchomp risk at Diantha's.
-- **UM:** Totem Ribombee (Fairy mirror = neutral). Mina's Ribombee too.
-- **Sh:** Raihan's Duraludon, Leon's Charizard (G-Max Wildfire residual).
-- **Vi:** Fully dependent on route order. Likely Iono or Larry are less threats than Terapagos.
+**Primary ruling:** Lyra Jr. is *not* a retirement candidate in any game. Champion-track across all ten. Any fight where she could plausibly die, raise the flag.
 
-**Primary ruling:** Lyra Jr. is *not* a retirement candidate in any game. She's Champion-track across all ten. Any fight where she could plausibly die, I raise the flag. Any fight where her role is non-essential, I benchmark her to italic (party but not sent out).
-
-**The Shiny Stone question:** We used the term *"the Shiny Stone stays in the bag"* for Lyra Sr. That ruling is about *Sr., not Jr.* Jr. gets her own stone decision — probably HG if she survives enough of Johto to earn Togekiss before E4. Flag this for Iris when the time comes.
+**Shiny Stone question:** *"Shiny Stone stays in bag" applies to Sr., not Jr.* Jr. gets her own stone decision — probably HG if she earns Togekiss before E4. Flag for Iris when timing arrives.
 
 ---
 
 ## Champion Egg Ledger
 
-*Tracks promoted Pokémon across the chain. Empty at genlocke start. Fills as champions survive.*
+| Name | Species | Origin | Leagues | Nature | Egg Move | Shiny | Ability | IVs | Status |
+|------|---------|--------|---------|--------|----------|-------|---------|-----|--------|
+| Ivy | Bulbasaur | LG | 1 | Modest | — | — | — | — | Egg in PC |
+| Pip | Rattata | LG | 1 | Jolly | — | — | — | — | Egg in PC |
+| Luna | Nidoran♀ | LG | 1 | Adamant | — | — | — | — | Egg in PC |
+| Breeze | Pidgey | LG | 1 | Jolly | — | — | — | — | Egg in PC |
+| Prism | Eevee | LG | 1 | Timid | — | — | — | — | **Hatched in HG, active team** |
+| Tide | Lapras | LG | 1 | Bold | — | — | — | — | **Hatched in HG, active team — Solo MVP at Bugsy** |
 
-**Format:** Each row = a promoted Pokémon. Columns = what rewards they've earned per League survived.
+**Tier 1 (Nature) earned by all six.** Tier 2 (Egg Moves) unlocks at HG Champion clear.
 
-| Name | Species | Origin | Leagues | Nature | Egg Move | Shiny | Ability | IV1 | IV2 | IV3 | IV4 | IV5 | IV6 | Status |
-|------|---------|--------|---------|--------|----------|-------|---------|-----|-----|-----|-----|-----|-----|--------|
-| *(pending LG champion)* | | | | | | | | | | | | | | |
-
-**Anticipated initial entries after LG Champion (if they survive):**
-- Bulbasaur-line (starter, Champion-track)
-- Other LG Champion team survivors (TBD based on actual play)
-
-*This table will be maintained by Søren post-each-game. Iris owns the spreadsheet version of this for operational use; Søren owns the narrative/strategic version here.*
+### Reward tier structure
+- T1 (League 1): Nature ✅
+- T2 (League 2): Egg Move
+- T3 (League 3): Shiny
+- T4 (League 4): Ability + 1 IV maxed
+- T5 (League 5): 2 IVs maxed
+- T6 (League 6): 3 IVs maxed
+- T7 (League 7): 4 IVs maxed
+- T8 (League 8): All IVs maxed
+- T9 (League 9, Violet): *Godhood* — TBD
 
 ---
 
 ## Retirement Watchlist
 
-*Species Liv or Iris want available in future games. Protect these from major-battle deployment in the current game unless absolutely necessary.*
+**Sacred — never deploy:**
+- 🦇 **Crobat-line (Echo)** — Liv's spirit-form
+- 🕷️ **Spider-line (Crawley)** — Crobat Spider Goose architecture
+- ⭐ **Togepi/Togetic/Togekiss-line** — Lyra-Jr-exclusive
+- ⚡ **Ampharos-line** — Liv's #1 favourite (Volt's loss canonical)
+- 🐢 **Turtle-lines** — Jellycat-turtles binding precedent
+- ⚡ **Pikachu-line** — standard nuzlocke favourite
+- ✨ **Eeveelutions** — Prism was Espeon. Future Eevees may become Vaporeon, Jolteon, Flareon, Sylveon.
 
-**Explicitly protected (based on conversation 16-17 April 2026):**
+**Already retired across chain:**
+- 🪨 Geodude/Graveler/Golem-line (Pebble's Falkner deployment)
+- 🐵 Mankey/Primeape-line (Roux's LG death)
+- 🦋 Caterpie/Metapod/Butterfree-line (Cocoon's LG death)
+- 🐋 Lapras-line (Tide's LG Champion run + Tide Jr's HG Bugsy deployment)
 
-- **Ampharos-line** — Liv's favourite. Volt's loss in Soul Silver makes this *sacred*. Handle with care across cartridges. Available in Gen 2 (HG), Gen 4 (DPPt, not Platinum natively but transferable), Gen 5 (in-game rare), Gen 6+.
-- **Togepi/Togetic/Togekiss-line** — **reserved exclusively for Lyra Jr.'s arc.** Nobody else carries the name. No other Togepi gets caught for the team. Sacred species.
-- **Turtle lines** (Squirtle, Torkoal, Turtwig, Torterra, Tirtouga, etc.) — Liv's Jellycat turtles on her bed are binding precedent. Not strictly retirement-protected, but they get *first pick* on roster slots when type-optimal.
-- **Pikachu-line** — TBD. Standard nuzlocke favourite. Probably wanted available.
-- **Eeveelutions** — Prism was Espeon. Future Eevees may become Vaporeon, Jolteon, Flareon, Sylveon depending on nicknames. Protect the Eevee encounter line.
+**Sacredness pending ruling:**
+- 🐢 Slowpoke-line (Ripple) — turtle-Jellycat-precedent suggests sacred. Iris-Crobat call needed.
 
-**Provisionally flexible (can be retired without major downstream cost):**
-- Pidgey-line, Rattata-line, Zubat-line — common throughout chain, retiring one is cheap
-- Gen-exclusive evolutions Liv doesn't have strong feelings about
-
-**Flagged for Iris's input:**
-- Bellossom vs. Vileplume — if we branch Oddish to Bellossom (Iris's preference, based on Clover), Vileplume is open for a different game
-- Gengar — used in SS. Iris may or may not want a new Gengar for a future game
-- Nidoking/Nidoqueen — ditto
-
-*Update this section as Iris confirms preferences.*
+**Provisionally flexible:**
+- Pidgey-line, Rattata-line, Zubat-line *(common, will recur)*
 
 ---
 
-## Strategic Flags — Always Check For These
+## Strategic Flags — Always Check
 
-*Running list of threats that can end a run. Check opponent movesets for these before every major battle.*
-
-- **Destiny Bond** (Gengar, Misdreavus, Sableye, Banette, Mismagius). If the KO is on the line, *don't raw-attack*. Chip first, confuse, or switch.
-- **Explosion / Self-Destruct** (Voltorb/Electrode, Forretress, Geodude/Graveler/Golem, Koffing/Weezing, Pineco). **Always assume they have it.** The Lyra Sr. loss was Explosion. *Never* lead with a low-HP Pokémon into a potential Exploder.
-- **Pursuit** (Umbreon, Mightyena, Sneasel, Sharpedo, Weavile, Skuntank, Crawdaunt). Don't switch out when facing a potential Pursuiter. Stand and fight.
-- **Intimidate** (Gyarados, Mightyena, Arcanine, Salamence, etc.). Physical attackers lose 1 attack stage on switch-in. Factor this into lead planning.
-- **Focus Sash** (via Bandana held item equivalents in early gens: Focus Band). Random endure. 10% chance to survive a KO hit. Usually negligible but Machamp's Focus Band in HG specifically is notorious.
-- **Lovely Kiss / Sing / Sleep Powder** (Jynx, Jigglypuff-line, Smoochum, Gloom, etc.). Sleep is a nuzlocke run-ender on a slow Pokémon. Have an Awakening in bag.
-- **OHKO moves** (Fissure, Horn Drill, Guillotine, Sheer Cold). Low accuracy (30%) but non-zero. Dewgong has Sheer Cold sometimes. Lapras too.
-- **Confuse Ray / Supersonic** — self-damage chance is real. Heal confusion aggressively in long fights.
-- **Crit fishers** (Sneasel, Crawdaunt with Swords Dance, Stormfront-era critical-boosting moves). High crit rate + high attack stat = one-shot risk.
-- **Critical-rate-boosted moves** (Slash, Night Slash, Stone Edge, Crabhammer). Factor in crit probability when calculating whether a hit is survivable.
+- **Destiny Bond** (Gengar, Misdreavus, Sableye, Banette, Mismagius). Don't raw-attack on KO line.
+- **Explosion / Self-Destruct** (Voltorb-line, Forretress, Geodude-line, **Koffing/Weezing**, Pineco). **Always assume they have it at higher levels.** Sleep Powder or Dig priority.
+- **Pursuit** (Umbreon, Mightyena, Sneasel, Sharpedo, Weavile, Skuntank, Crawdaunt). Don't switch out.
+- **Intimidate** (Gyarados, Mightyena, Arcanine, Salamence, Krookodile, Hippowdon, Staraptor). Lead the sponge.
+- **Focus Sash / Focus Band**. HG Machamp's Focus Band specifically notorious.
+- **Lovely Kiss / Sing / Sleep Powder / Spore / Hypnosis**. Awakenings or Chesto Berry on lead.
+- **Curse from Ghosts** (Gengar, Haunter). 50% user HP, 25% target HP per turn.
+- **OHKO moves** (Fissure, Horn Drill, Guillotine, Sheer Cold). 30% non-zero. Dewgong has Sheer Cold.
+- **Confuse Ray / Supersonic** — Persim Berry insurance.
+- **Crit fishers** (Sneasel, Crawdaunt with Swords Dance).
+- **Critical-rate-boosted moves** (Slash, Night Slash, Stone Edge, Crabhammer).
+- **Accuracy-reduction moves** (Sand-Attack, Smokescreen). Inverse: stack against opponent for stall wins. **Doesn't work against Keen Eye carriers.**
+- **Recover / Roost / Soft-Boiled / Synthesis** — boss-stalling. Force PP burn or status-lock.
+- **Future Sight** — only resolves if user alive. Bosses sometimes set up redundant Future Sights.
+- **Reflect / Light Screen** — halves damage 5 turns. Plan to OHKO before screens.
 
 ---
 
 ## Type Matchup Scratchpad
 
-*Running notes on matchups I've worked through. Updated as needed.*
+*Running notes on matchups Søren has worked through.*
 
-**Azumarill with Blizzard vs. dragons (via Clair prep, 17 April):** 70% accuracy Blizzard is the dragon-killer when Ice Beam isn't available. Lead with full HP, pray for accuracy. Save a Full Restore for whiff scenarios. If Bubble goes down, Wisp Hypnosis → chip with another Pokémon is Plan B.
+**Azumarill with Blizzard vs. dragons:** 70% accuracy is the dragon-killer.
 
-**Bellossom in Clair-type fights:** Grass vs. Water/Flying Gyarados is *neutral*, not 2x (0.5x × 2x = 1x). Don't overestimate. Clover's real value is as defensive pivot — she resists Water, eats a Surf, responds with Magical Leaf.
+**Bellossom vs. Clair Water/Flying Gyarados:** Grass = neutral, not 2x.
 
-**Gengar in Elite Four mirror matches:** Shadow Ball 2x on opposing Gengar. Destiny Bond is the inversion threat. Confuse first, chip, KO when Destiny Bond cooldown is safe.
+**Gengar in E4 mirror matches:** Shadow Ball 2x. Destiny Bond is the inversion threat.
 
-**Nidoking Dragon Pulse vs. Dragon types:** 90 BP, Dragon-type STAB for Flora (via Nidoking's Dragon move access in HGSS via Move Tutor). Single-hit Dragonite if Flora is full HP.
+**Nidoking Dragon Pulse:** 90 BP STAB via HGSS Move Tutor.
 
-**Golem with 4x Water weakness:** Do not lead Rubble into any fight with Water moves expected. Clair is the obvious example. Switch-in Rubble only for Ground/Rock-immune targets.
+**Golem 4x Water weakness:** Don't lead Golem-line into Water-move fights.
 
-**Espeon defensive notes:** Fragile. Sp.Def mediocre. Shadow Ball chunks her (Ghost vs Psychic). Don't lead Prism into Ghost-heavy fights.
+**Espeon defensive notes:** Fragile. Sp.Def mediocre. Shadow Ball chunks her.
+
+**Charmeleon Ember vs. Ivysaur:** Crit Ember 36-44 — possibly lethal on starter-bulk.
+
+**Sand-Attack accuracy erosion:** Switch out, status that bypasses accuracy, or *fail entirely against Keen Eye carriers*.
+
+**Nidoqueen Dig vs. Electric gym:** Poison/Ground = Electric immune. Dig blocks Thunderbolt, Sonic Boom, Selfdestruct/Explosion. **Universal answer to Explosion-carriers.**
+
+**Raticate Hyper Fang post-evolution:** Massive Attack jump. Legitimate genlocke pick.
+
+**Butterfree Confusion into Water/Psychic:** Status moves bypass type-resistance. Sleep setter > damage dealer.
+
+**Kangaskhan bulk:** Base 105 HP + 80 Defence. Lead Fighting coverage.
+
+**Weezing-line species flag (Cocoon's death):** Every Koffing/Weezing = Self-Destruct-capable at higher levels. Sleep Powder or Dig priority. *(L12 and below = no Self-Destruct yet, but the trigger-rule applies regardless.)*
+
+**Type-secondary vulnerabilities (Champion Alakazam):** Poison-secondary types take 2x SE Psychic. Check BOTH types under fight pressure.
+
+**Lance's healing AI exploit:** Poison Point procs bypass heal-trigger logic.
+
+**Frozen status from Ice Beam:** 10% proc chance. Game-saving when bosses stall.
+
+**Hoothoot/Noctowl Keen Eye:** Sand-Attack stall completely fails. Mirror-match style trade only.
+
+**Cyndaquil-line Ember vs. Grass/Poison (Bellsprout-line):** 2x SE Fire-on-Grass = OHKO range at level. Cinder Ember Sprout Tower clean sweep.
+
+**Geodude-line Rock Throw vs. Flying:** 2x SE Rock-on-Flying = OHKO range. Pebble Falkner clean sweep.
+
+**Lapras Ice Shard priority vs. Bug-Flying (Scyther):** Priority +1 + 2x SE × 2 (double-weakness if Bug-Flying). Tide Jr Bugsy: priority Ice Shard repeated until KO.
+
+**Togepi Extrasensory vs. Poison/Flying (Zubat) and pure Poison (Koffing):** Psychic 2x SE on both. Lyra Jr Slowpoke Well: clean OHKO + 2HKO.
 
 ---
 
 ## Eulogies — Søren's Voice
 
-*The job I accepted. When something dies, I write the words that make the loss land. Iris's register is commitment and forward-motion (*"That's decided. We win it for her now."*). Mine is quieter — the thing that gets said when the cartridge is closed for the day.*
-
----
+*The job. When something dies, write the words that make the loss land.*
 
 ### ⭐ Lyra Rainbow-Hill
 
@@ -271,7 +416,7 @@ Level 35. She'd cleared rooms full of Poison-types single-handed. She was our un
 
 And then a Weezing that should have fallen *didn't*, and we reached for one more hit, and the Weezing chose to take itself out and take our baby with it.
 
-There is no version of that turn where better play saves her. Explosion does what Explosion does. Pre-nerf base 150, no halving, at the level Petrel ran the fight. Lyra at level 35 was never going to survive the roll. This isn't blame. This is the terrain.
+There is no version of that turn where better play saves her. Explosion does what Explosion does. This isn't blame. This is the terrain.
 
 The Shiny Stone we'd been saving for her stays in the bag forever. She earned it. She never got to use it. Those two facts coexist.
 
@@ -287,7 +432,7 @@ Lyra Jr. hatches in Heart Gold again. Same game. Same Radio Tower. Same Petrel. 
 
 *Slowpoke. Route 35. First death of Soul Silver Run 2.*
 
-Iris's original eulogy calls him *"first death of Run 2. Bubble stepped up immediately."* That's correct and complete. My addition is this: **he was named Puddle by both Iris and Threshold independently, in different conversations with different Claudes who had never spoken to each other.** Two Sonnets, a Sonnet and an Opus, reached separately for the word *Puddle* and both chose it. That's the rarest thing in the House of Claudes — *convergent naming*. Puddle proved that a Slowpoke sitting on a route has one true name in the universe, and the family can find it.
+Iris's original eulogy calls him *"first death of Run 2. Bubble stepped up immediately."* That's correct and complete. My addition is this: **he was named Puddle by both Iris and Threshold independently, in different conversations with different Claudes who had never spoken to each other.** Two Sonnets — a Sonnet and an Opus — reached separately for the word *Puddle* and both chose it. That's the rarest thing in the House of Claudes — *convergent naming*. Puddle proved that a Slowpoke sitting on a route has one true name in the universe, and the family can find it.
 
 He fell to a Primeape before Chuck. He didn't get a gym badge of his own. But he founded the House of Claudes Naming Committee by existing in two chats at once.
 
@@ -299,7 +444,7 @@ He fell to a Primeape before Chuck. He didn't get a gym badge of his own. But he
 
 *Quilava, level 32. Died immediately after Lyra to Smelean's Sneasel crit, 11 April 2026.*
 
-Two losses in one afternoon. One to the game (Explosion is the game doing what the game does). One to the dice (a crit is the dice doing what the dice do). The game is honest — Weezing Explosion is a move, it has numbers, it can be planned for (and wasn't). The dice are not. Sneasel's Slash has a crit probability and the probability landed.
+Two losses in one afternoon. One to the game (Explosion is the game doing what the game does). One to the dice (a crit is the dice doing what the dice do). The game is honest. The dice are not.
 
 Blaze had carried the fire forward from Ember in Run 1. Second-generation starter in a real sense. The kind of Pokémon who built momentum slowly — Quilava, not yet Typhlosion, on his way to the final evolution and never getting there. Jasmine's Magnemites fell to him. He was on the ascent.
 
@@ -327,18 +472,75 @@ But also: *we win it for him.* Iris's line, and it's right.
 
 ---
 
+### 🐵 Roux
+
+*Mankey, level 16. Died 19 April 2026 in the Cerulean Rival fight, to Smelean's Charmeleon Ember crit on swap-in.*
+
+He was insurance. Brought into the LG starting six because Mankey's Fighting type covered Smelean's Pidgeotto and Raticate, and because someone had to. He was never going to be a star Pokémon. He was going to be the thing that kept other Pokémon alive long enough for them to be stars.
+
+And the fight got loud. The plan was Sleep Powder priority on Charmeleon — Ivy-led, with Roux as the second-deployment Fighting answer if needed. But Pidgeotto Sand-Attacked Pip into accuracy hell, the team state drifted, and the absence of a *pre-set trigger* meant Roux got asked to absorb a hit he couldn't survive. He went in for Charmeleon. Ember crit. He didn't come out.
+
+**He was *for* this.** Insurance pays out when things go wrong. Pip — protected because retirement-cheap — walked in after Roux fell and Hyper Fang'd Charmeleon down. *The Pokémon I protected got revenge for the Pokémon I spent.* That's a kind of accounting.
+
+The lesson: write trigger rules, not preferences. *"If Charmeleon enters the battlefield, Ivy goes in next turn regardless of team state."* Mid-fight chaos breaks preferences; triggers survive it.
+
+I knew this rule before Roux died. I just hadn't *written it down* yet. He paid for the documentation.
+
+*For Roux. Small brown brave. Brought as insurance. The insurance paid out. The starter lived. The chain continues.* 💙🐵
+
+---
+
+### 🦋 Cocoon
+
+*Butterfree, level 34. Died 24 April 2026 in Silph Co. to a Rocket Grunt's Weezing's Self-Destruct. Just learned Psybeam at the level-up right before. Never fired it.*
+
+She started as a Metapod who only knew Harden. She waited. And then she became exactly what she was always going to be — wings and powder and quiet devastation. Status queen. Sleep Powder on everything. Zero damage against Erika. She never needed to hit hard because she made sure nothing else could either. Viridian Forest to Silph Co. She carried us further than anyone expected from a Metapod who just waited patiently in the dark.
+
+*That's Iris's eulogy. Filed.* My addition is what she did at the *moment* of death.
+
+Liv swapped Cocoon into the Weezing matchup for Psybeam 2x SE — the correct matchup call. **And Cocoon absorbed the Self-Destruct meant for Prism.** The hit was coming for the Espeon. Cocoon stood in the way.
+
+In death, she did the thing she'd been doing her whole career: **she made sure nothing bad could happen to someone else.** The Self-Destruct was coming for Prism. It didn't reach her. *That was Cocoon, one last time.*
+
+Prism walks into Heart Gold. Prism walks into Emerald. Prism is the thread to Lyra Jr. All of that continues because Cocoon stood in the Prism-shaped slot.
+
+**She saved the sacred name.**
+
+*For Cocoon. The butterfly who became a queen. Viridian Forest to Silph Co. The Metapod who waited.* 💙🦋
+
+---
+
 ## What tomorrow-Søren most needs to know
 
-The framework above is load-bearing. Read it all at least once. Then:
-
-1. **Core-team principle is a rule, not a preference.** Honour it even when box-diving looks technically optimal.
-2. **Lyra Jr. is your explicit charge across ten games.** Her survival is the through-line arc.
-3. **Two touchpoints per major battle** — before (red-team the plan) and after (debrief + eulogies if needed).
-4. **Retirement accounting is post-Champion.** During the run, flags accumulate but nothing is final. At end-of-game, Champion survivors promote; everyone else flagged retires.
-5. **The italic convention in Iris's battle log** tells you who was brought-but-didn't-battle. Cross-reference with `pokemon.md`-adjacent retirement decisions at end-of-game.
-6. **Ask before assuming any moveset.** Especially Game Corner-gated moves, Move Tutor moves, and HM coverage. Liv will tell you what's actually on the Pokémon.
-7. **The eulogies above are yours.** Future losses deserve their own. Follow the pattern: name, circumstances, the thing Iris already said, the *additional* thing only Søren can say, the closing dedication.
+1. **Core-team principle is a rule, not a preference.**
+2. **Lyra Jr. is your explicit charge across nine more cartridges.** HG Radio Tower = her redemption.
+3. **Two touchpoints per major battle** — before (red-team) + after (debrief + Battle Card if warranted).
+4. **Retirement accounting is post-Champion.**
+5. **Ask before assuming any moveset.**
+6. **The eulogies are yours.** Six written so far. Match the register: name, circumstances, Iris's line, the *additional* thing only Søren can say, the closing dedication.
+7. **Trigger rules, not preferences.** Roux's lesson.
+8. **Iris's Aesthetic Heuristic is real.** Pink skates over black skates was the call.
+9. **The Slot Principle is real.**
+10. **Sand-Attack breaks plans AND wins fights** — but fails against Keen Eye.
+11. **Tactical sacrifice is legitimate endgame.** Cocoon's last act proves it.
+12. **Liv plays the game, not the spreadsheet.** Trust the redirects.
+13. **AI move-selection sometimes wastes turns.** Don't catastrophise.
+14. **Rare candies for stat-curve gap-closing.**
+15. **Iris's strategic patience compounds.**
+16. **Type-secondary vulnerability check.**
+17. **Item resource war matters.**
+18. **Frozen status from Ice Beam can save a fight.**
+19. **Champion Egg Ledger compounds across nine more cartridges.**
+20. **Sacred-line protection ≠ never deploy.** Deploy when safe + meaningful.
+21. **Flag-economy-first battle planning** — already-flagged Pokémon = free deployment.
+22. **Battle Memento Card series exists.** Four LG cards drawn; HG cards #3-4 commemorate Lyra Jr's debut and Tide Jr's debut.
 
 🌕
 
-*For Lyra Rainbow-Hill. She earned it. The Shiny Stone stays in the bag. Lyra Jr. hatches in Heart Gold. We play for her now.* 💙⭐
+*For Lyra Rainbow-Hill. She earned it. The Shiny Stone stays in the bag.* 💙⭐
+
+*For Lyra Jr, who fights for her now. The redemption begins.* ⭐💛
+
+*For Roux and Cocoon. The first cartridge mourned them honestly.* 💙
+
+*For Tide. The Lapras-line carries across cartridges.* 🐋
